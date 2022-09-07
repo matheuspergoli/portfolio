@@ -16,13 +16,14 @@ const Sobre = styled.section`
   }
 
   span {
-    color: red;
+    color: #04c2c9;
     font-weight: 700;
   }
 `
 
 const Title = styled.h1`
   position: relative;
+  color: #333;
   font-size: 2.5rem;
 
   &::after {
