@@ -134,7 +134,7 @@ const ContainerImage = styled.figure`
 
 const Title = styled.h1`
   color: #333;
-  font-size: 2rem;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
 
   span {
     color: #04c2c9;
