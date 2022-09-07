@@ -11,13 +11,11 @@ const ContainerMain = styled.main`
   height: 100vh;
   color: white;
   text-align: center;
-  background-color: #333;
 
   a {
     display: flex;
-    align-items: center;
     gap: 5px;
-    padding: 15px;
+    padding: 10px;
     color: white;
     font-size: 1.5rem;
     width: fit-content;
@@ -44,6 +42,7 @@ const ContainerMain = styled.main`
 
 const Titulo = styled.h1`
   font-weight: 300;
+  font-size: 1.8rem;
 
   span:nth-of-type(1) {
     color: red;

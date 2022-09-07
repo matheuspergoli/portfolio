@@ -5,11 +5,11 @@ import Head from '../Helper/Head'
 const ContainerMain = styled.main`
   padding: 20px;
   font-weight: 300;
-  font-size: 1.5rem;
 `
 
 const Sobre = styled.section`
   max-width: 80rem;
+  font-size: 1.35rem;
 
   p {
     line-height: 1.5;
