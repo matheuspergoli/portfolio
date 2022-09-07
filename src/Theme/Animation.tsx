@@ -34,40 +34,6 @@ export const GlobalAnimations = createGlobalStyle`
     }
   }
 
-  .flicker-1 {
-    animation: flicker-1 2s linear infinite both 0.7s;
-  }
-  @keyframes flicker-1 {
-    0%,
-    100% {
-      opacity: 1;
-    }
-    41.99% {
-      opacity: 1;
-    }
-    42% {
-      opacity: 0;
-    }
-    43% {
-      opacity: 0;
-    }
-    43.01% {
-      opacity: 1;
-    }
-    47.99% {
-      opacity: 1;
-    }
-    48% {
-      opacity: 0;
-    }
-    49% {
-      opacity: 0;
-    }
-    49.01% {
-      opacity: 1;
-    }
-  }
-
   .text-pop-up-top {
 	  animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   }
