@@ -42,11 +42,15 @@ const ContainerMain = styled.main`
 
 const Titulo = styled.h1`
   font-weight: 300;
-  font-size: 1.8rem;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
 
   span:nth-of-type(1) {
     color: red;
     font-weight: 700;
+
+    @media (max-width: 430px) {
+      display: block;
+    }
   }
 
   span:nth-of-type(2) {
@@ -61,7 +65,7 @@ function Home() {
       <ContainerMain>
         <Background />
         <Titulo className='tracking-in-expand'>
-          Olá, Meu nome é <span className='flicker-1'>Matheus Pergoli</span>.
+          Olá, Meu nome é <span className='flicker-1'>Matheus Pergoli</span>
           <span>Eu sou um Desenvolvedor Web</span>
         </Titulo>
         <Link to='sobre' className='slide-in-elliptic-top-fwd'>
