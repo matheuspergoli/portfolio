@@ -18,6 +18,11 @@ const ContainerSkills = styled.section`
   flex-wrap: wrap;
   gap: 10px;
   padding: 10px;
+
+  a {
+    color: #333;
+    text-decoration: none;
+  }
 `
 
 const Title = styled.h1`
@@ -55,7 +60,7 @@ function Habilidades() {
         <Skills title='Responsividade' image={<PhoneImg />} />
         <Skills title='TailwindCSS' image={<TailImg />} />
         <Skills title='SCSS' image={<SassImg />} />
-        <Skills title='Git/Github' image={<GitImg />} />
+        <Skills title='Git-Github' image={<GitImg />} />
       </ContainerSkills>
       <Title>Idiomas</Title>
       <ContainerSkills className='slide-in-top'>

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 const ContainerSkills = styled.section`
   text-align: center;
@@ -23,6 +24,12 @@ const ContainerImg = styled.figure`
 
   svg {
     font-size: 3.5rem;
+    transition: all 300ms;
+  }
+
+  &:hover svg {
+    fill: #333;
+    transform: scale(1.15);
   }
 `
 
@@ -33,12 +40,14 @@ interface Props {
 
 function Skills({ title, image }: Props) {
   return (
-    <ContainerSkills>
-      <Title>{title}</Title>
-      <ContainerImg>
-        {image}
-      </ContainerImg>
-    </ContainerSkills>
+    <Link to={`/sobre/habilidades/${title}`}>
+      <ContainerSkills>
+        <Title>{title}</Title>
+        <ContainerImg>
+          {image}
+        </ContainerImg>
+      </ContainerSkills>
+    </Link>
   )
 }
 
