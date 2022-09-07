@@ -47,7 +47,7 @@ function Habilidades() {
     <>
       <Head title='Habilidades' />
       <Title>Minhas habilidades</Title>
-      <ContainerSkills className='slide-in-blurred-top'>
+      <ContainerSkills>
         <Skills title='HTML5' image={<HtmlImg />} />
         <Skills title='CSS3' image={<CSSImg />} />
         <Skills title='JavaScript' image={<JSImg />} />
@@ -56,14 +56,14 @@ function Habilidades() {
         <Skills title='Styled-Components' image={<StyledImg />} />
       </ContainerSkills>
       <Title>Outros Conhecimentos</Title>
-      <ContainerSkills className='slide-in-blurred-top'>
+      <ContainerSkills>
         <Skills title='Responsividade' image={<PhoneImg />} />
         <Skills title='TailwindCSS' image={<TailImg />} />
         <Skills title='SCSS' image={<SassImg />} />
         <Skills title='Git-Github' image={<GitImg />} />
       </ContainerSkills>
       <Title>Idiomas</Title>
-      <ContainerSkills className='slide-in-blurred-top'>
+      <ContainerSkills>
         <Skills title='Inglês' image={<ENImg />} />
       </ContainerSkills>
     </>
