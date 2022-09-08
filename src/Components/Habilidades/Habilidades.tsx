@@ -10,6 +10,7 @@ import { SiTailwindcss as TailImg } from 'react-icons/si'
 import { RiEnglishInput as ENImg } from 'react-icons/ri'
 import { AiFillGithub as GitImg } from 'react-icons/ai'
 import Head from '../Helper/Head'
+import AnimateFadeDiv from '../Motion/AnimateFadeDiv'
 
 const ContainerSkills = styled.section`
   display: flex;
@@ -49,7 +50,7 @@ const Title = styled.h1`
 
 function Habilidades() {
   return (
-    <>
+    <AnimateFadeDiv>
       <Head title='Habilidades' />
       <Title>Minhas habilidades</Title>
       <ContainerSkills>
@@ -71,7 +72,7 @@ function Habilidades() {
       <ContainerSkills>
         <Skills title='Inglês' image={<ENImg />} />
       </ContainerSkills>
-    </>
+    </AnimateFadeDiv>
   )
 }
 

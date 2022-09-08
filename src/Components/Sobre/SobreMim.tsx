@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Head from '../Helper/Head'
+import AnimateFadeDiv from '../Motion/AnimateFadeDiv'
 
 const ContainerMain = styled.main`
   font-weight: 300;
@@ -40,7 +41,7 @@ const Title = styled.h1`
 
 function SobreMim() {
   return (
-    <>
+    <AnimateFadeDiv>
       <Head title='Sobre mim' />
       <ContainerMain>
         <Title>Quem sou eu?</Title>
@@ -62,7 +63,7 @@ function SobreMim() {
           </p>
         </Sobre>
       </ContainerMain>
-    </>
+    </AnimateFadeDiv>
   )
 }
 

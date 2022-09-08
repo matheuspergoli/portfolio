@@ -2,6 +2,7 @@ import React from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import Head from '../Helper/Head'
 import styled from 'styled-components'
+import AnimateLeftDiv from '../Motion/AnimateLeftDiv'
 
 const info = [
   {
@@ -116,7 +117,7 @@ function InfoSkill() {
   }, [id])
 
   return (
-    <>
+    <AnimateLeftDiv>
       {conhecimento && <Head title={conhecimento[0].skill} />}
       {conhecimento && conhecimento.map((item: SkillProps) => (
         <ContainerMain key={item.skill}>
@@ -126,7 +127,7 @@ function InfoSkill() {
           <Title>Descrição: <span>{item.descricao}</span></Title>
         </ContainerMain>
       ))}
-    </>
+    </AnimateLeftDiv>
   )
 }
 
