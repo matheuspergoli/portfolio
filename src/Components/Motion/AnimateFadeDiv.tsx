@@ -14,7 +14,7 @@ function AnimateFadeDiv({ children }: any) {
     initial='initial'
     animate='animate'
     exit='exit'
-    transition={{ duration: 0.3 }}>
+    transition={{ duration: 0.4 }}>
       {children}
     </motion.div>
   )
