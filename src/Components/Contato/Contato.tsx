@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import useForm from '../../Hooks/useForm'
 import AnimateFadeDiv from '../Motion/AnimateFadeDiv'
 import Input from './Input'
+import OutrosContatos from './OutrosContatos'
 
 const ContainerMain = styled.main`
   padding: 0 20px 20px 20px;
@@ -27,8 +28,8 @@ const Title = styled.h1`
 
 const Formulario = styled.form`
   padding: 20px;
-  margin: 0 auto;
   max-width: 500px;
+  margin: 0 auto 30px auto;
   background-color: #333;
 `
 
@@ -106,6 +107,7 @@ function Contato() {
           <TextArea placeholder='Sua mensagem aqui' />
           <BtnEnviar type='submit'>Enviar</BtnEnviar>
         </Formulario>
+        <OutrosContatos />
       </ContainerMain>
     </AnimateFadeDiv>
   )

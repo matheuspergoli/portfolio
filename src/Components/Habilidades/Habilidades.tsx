@@ -28,6 +28,7 @@ const ContainerSkills = styled.section`
 
 const Title = styled.h1`
   color: #333;
+  padding: 0 20px;
   font-size: 2.25rem;
   width: fit-content;
   text-align: center;
