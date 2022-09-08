@@ -8,20 +8,14 @@ const animations = {
 }
 
 function AnimarEntrada({ children }: any) {
-  const id = React.useId()
-
   return (
     <AnimatePresence mode='wait'>
       <motion.div
-      key={id}
       variants={animations}
       initial='initial'
       animate='animate'
       exit='exit'
-      transition={{ duration: 0.3 }}
-      >
-        {children}
-      </motion.div>
+      transition={{ duration: 0.3 }}>{children}</motion.div>
     </AnimatePresence>
   )
 }
