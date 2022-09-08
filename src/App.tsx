@@ -1,16 +1,17 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import Home from './Components/Home/Home'
 import Sobre from './Components/Sobre/Sobre'
+import { AnimatePresence } from 'framer-motion'
 
 function App() {
   return (
-    <BrowserRouter>
+    <AnimatePresence mode='wait'>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='sobre/*' element={<Sobre />} />
       </Routes>
-    </BrowserRouter>
+    </AnimatePresence>
   )
 }
 

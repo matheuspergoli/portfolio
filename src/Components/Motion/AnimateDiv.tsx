@@ -14,7 +14,8 @@ function AnimateDiv({key, children }: any) {
     variants={animations}
     initial='initial'
     animate='animate'
-    exit='exit'>
+    exit='exit'
+    transition={{ duration: 0.3 }}>
       {children}
     </motion.div>
   )
