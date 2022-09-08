@@ -57,7 +57,7 @@ const BtnMobile = styled.button`
   cursor: pointer;
   transition: all 100ms;
   border-radius: 0.2rem;
-  background-color: #eee;
+  background-color: #333;
   margin: 15px 15px 15px auto;
   border: 1px solid transparent;
   
@@ -67,7 +67,6 @@ const BtnMobile = styled.button`
     outline: none;
     color: #04c2c9;
     border-color: #04c2c9;
-    background-color: white;
     box-shadow: 0 0 0 3px #04c2c9;
   }
   
@@ -78,14 +77,15 @@ const BtnMobile = styled.button`
     width: 1.2rem;
     border-radius: 2px;
     transition: all 200ms;
-    background-color: currentColor;
-    box-shadow: 0 6px currentColor, 0 -6px currentColor;
+    background-color: white;
+    box-shadow: 0 6px white, 0 -6px white;
   }
 
   &.mobileButtonActive::after {
     width: 4px;
     height: 4px;
     transform: rotate(90deg);
+    background-color: currentColor;
     box-shadow: 0 8px currentColor, 0 -8px currentColor;
   }
 `

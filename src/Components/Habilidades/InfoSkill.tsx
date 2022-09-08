@@ -82,7 +82,7 @@ const ContainerMain = styled.main`
 
 const Title = styled.h1`
   color: #333;
-  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  font-size: clamp(1.5rem, 5vw, 2rem);
 
   span {
     color: #04c2c9;

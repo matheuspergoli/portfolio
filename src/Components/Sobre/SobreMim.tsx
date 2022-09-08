@@ -9,7 +9,7 @@ const ContainerMain = styled.main`
 
 const Sobre = styled.section`
   max-width: 80rem;
-  font-size: 1.35rem;
+  font-size: 1.3rem;
 
   p {
     line-height: 1.5;
@@ -24,7 +24,7 @@ const Sobre = styled.section`
 const Title = styled.h1`
   position: relative;
   color: #333;
-  font-size: 2.5rem;
+  font-size: 2.25rem;
 
   &::after {
     content: '';
