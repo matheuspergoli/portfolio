@@ -7,10 +7,9 @@ const animations = {
   exit: { scaleY: 0 }
 }
 
-function AnimateDiv({key, children }: any) {
+function AnimateDiv({ children }: any) {
   return (
     <motion.div
-    key={key}
     variants={animations}
     initial='initial'
     animate='animate'

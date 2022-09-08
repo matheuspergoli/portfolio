@@ -61,7 +61,7 @@ const Titulo = styled.h1`
 
 function Home() {
   return (
-    <AnimateDiv key='1'>
+    <AnimateDiv>
       <Head title='Home' />
       <ContainerMain>
         <Background />
