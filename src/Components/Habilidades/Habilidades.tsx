@@ -17,7 +17,7 @@ const ContainerSkills = styled.section`
   justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 10px;
-  padding: 10px;
+  padding: 0 20px;
 
   a {
     color: #333;
@@ -26,7 +26,7 @@ const ContainerSkills = styled.section`
 `
 
 const Title = styled.h1`
-  color: #04c2c9;
+  color: #333;
   font-size: 2.25rem;
   width: fit-content;
   text-align: center;

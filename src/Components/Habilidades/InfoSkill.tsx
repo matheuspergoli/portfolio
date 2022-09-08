@@ -77,14 +77,15 @@ const ContainerMain = styled.main`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-left: 20px;
+  padding: 0 20px;
 `
 
 const Title = styled.h1`
   color: #333;
-  font-size: clamp(1.5rem, 5vw, 2rem);
+  font-size: clamp(1.5rem, 5vw, 2.25rem);
 
   span {
+    font-size: 2rem;
     font-weight: 400;
     color: #04c2c9;
   }
