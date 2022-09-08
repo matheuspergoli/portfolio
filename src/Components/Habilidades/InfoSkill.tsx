@@ -56,9 +56,14 @@ const info = [
     descricao: 'Sistema para Controle de Versionamento'
   },
   {
-    skill: 'Inglês',
+    skill: 'Inglês-US',
     nivel: 'Intermediário',
-    descricao: 'Língua nativa de Americanos e Ingleses'
+    descricao: 'Língua nativa de Americanos'
+  },
+  {
+    skill: 'Português-BR',
+    nivel: 'Minha língua nativa <3',
+    descricao: 'Língua nativa de Brasileiros'
   }
 ]
 

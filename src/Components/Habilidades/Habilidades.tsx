@@ -9,6 +9,7 @@ import { GiSmartphone as PhoneImg } from 'react-icons/gi'
 import { SiTailwindcss as TailImg } from 'react-icons/si'
 import { RiEnglishInput as ENImg } from 'react-icons/ri'
 import { AiFillGithub as GitImg } from 'react-icons/ai'
+import { GiBrazilFlag as BrImg } from 'react-icons/gi'
 import Head from '../Helper/Head'
 import AnimateFadeDiv from '../Motion/AnimateFadeDiv'
 
@@ -71,7 +72,8 @@ function Habilidades() {
       </ContainerSkills>
       <Title>Idiomas</Title>
       <ContainerSkills>
-        <Skills title='Inglês' image={<ENImg />} />
+        <Skills title='Inglês-US' image={<ENImg />} />
+        <Skills title='Português-BR' image={<BrImg />} />
       </ContainerSkills>
     </AnimateFadeDiv>
   )
