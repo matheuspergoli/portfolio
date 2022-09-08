@@ -77,7 +77,7 @@ const ContainerMain = styled.main`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 0 20px;
+  padding: 0 20px 20px 20px;
 `
 
 const Title = styled.h1`

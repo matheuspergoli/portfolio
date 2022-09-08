@@ -17,7 +17,7 @@ const ContainerSkills = styled.section`
   justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 10px;
-  padding: 0 20px;
+  padding: 0 20px 20px 20px;
 
   a {
     color: #333;

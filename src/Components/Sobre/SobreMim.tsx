@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import Head from '../Helper/Head'
 
 const ContainerMain = styled.main`
-  padding: 0 20px;
   font-weight: 300;
+  padding: 0 20px 20px 20px;
 `
 
 const Sobre = styled.section`
