@@ -4,6 +4,7 @@ import Navbar from '../Navbar/Navbar'
 import Habilidades from '../Habilidades/Habilidades'
 import SobreMim from './SobreMim'
 import InfoSkill from '../Habilidades/InfoSkill'
+import Contato from '../Contato/Contato'
 
 function Sobre() {
   return (
@@ -13,6 +14,7 @@ function Sobre() {
         <Route path='/' element={<SobreMim />} />
         <Route path='habilidades' element={<Habilidades />} />
         <Route path='habilidades/:id' element={<InfoSkill />} />
+        <Route path='contato' element={<Contato />} />
       </Routes>
     </>
   )
