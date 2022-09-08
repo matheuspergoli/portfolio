@@ -2,9 +2,9 @@ import React from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const animations = {
-  initial: { scaleY: 0 },
-  animate: { scaleY: 1 },
-  exit: { scaleY: 0 }
+  initial: { x: 100, opacity: 0 },
+  animate: { x: 0, opacity: 1 },
+  exit: { x: 100, opacity: 0 }
 }
 
 function AnimarEntrada({ children }: any) {

@@ -25,11 +25,11 @@ const Title = styled.h1`
   position: relative;
   color: #333;
   font-size: 2.25rem;
+  margin-bottom: 20px;
 
   &::after {
     content: '';
     position: absolute;
-    bottom: -11px;
     display: block;
     height: 7px;
     width: 110px;
@@ -43,8 +43,8 @@ function SobreMim() {
     <>
       <Head title='Sobre mim' />
       <ContainerMain>
-        <Title className='text-pop-up-top'>Quem sou eu?</Title>
-        <Sobre className='fade-in'>
+        <Title>Quem sou eu?</Title>
+        <Sobre>
           <p>
             Me chamo <span>Matheus Pergoli</span> Tenho 23 anos, sou de SP/Brasil
             e sou estudante de <span>Desenvolvimento Web</span>.
