@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Head from '../Helper/Head'
 
 const ContainerMain = styled.main`
-  padding: 20px;
+  padding: 0 20px;
   font-weight: 300;
 `
 

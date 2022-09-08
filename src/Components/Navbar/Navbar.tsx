@@ -8,7 +8,7 @@ const NavbarContainer = styled.nav`
   align-items: center;
   gap: 20px;
   padding: 15px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   background-color: #333;
 
   &.navMobile {
