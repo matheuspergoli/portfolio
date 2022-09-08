@@ -82,12 +82,12 @@ const ContainerMain = styled.main`
 
 const Title = styled.h1`
   color: #333;
-  font-size: clamp(1.5rem, 5vw, 2.25rem);
+  font-size: clamp(1.7rem, 5vw, 2.25rem);
 
   span {
-    font-size: 2rem;
     font-weight: 400;
     color: #04c2c9;
+    font-size: clamp(1.5rem, 5vw, 2rem);
   }
 `
 
