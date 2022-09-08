@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import Head from '../Helper/Head'
 import styled from 'styled-components'
 
@@ -91,9 +91,24 @@ const Title = styled.h1`
   }
 `
 
+const BtnVoltar = styled.button`
+  padding: 10px;
+  cursor: pointer;
+  color: #04c2c9;
+  font-size: 1.5rem;
+  width: fit-content;
+  border: 3px solid #333;
+  background-color: #333;
+`
+
 function InfoSkill() {
+  const navigate = useNavigate()
   const { id } = useParams()
   const [conhecimento, setConhecimento] = React.useState<Props>()
+
+  function voltarPagina() {
+    navigate('/sobre/habilidades')
+  }
 
   React.useEffect(() => {
     const infoAtual = info.filter(item => item.skill === id)
@@ -105,6 +120,7 @@ function InfoSkill() {
       {conhecimento && <Head title={conhecimento[0].skill} />}
       {conhecimento && conhecimento.map((item: SkillProps) => (
         <ContainerMain key={item.skill}>
+          <BtnVoltar onClick={voltarPagina}>Voltar</BtnVoltar>
           <Title>Conhecimento: <span>{item.skill}</span></Title>
           <Title>Nível: <span>{item.nivel}</span></Title>
           <Title>Descrição: <span>{item.descricao}</span></Title>
