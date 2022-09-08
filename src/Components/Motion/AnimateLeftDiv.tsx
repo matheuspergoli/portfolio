@@ -2,12 +2,12 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 const animations = {
-  initial: { scaleY: 0 },
-  animate: { scaleY: 1 },
-  exit: { scaleY: 0 }
+  initial: { x: 300 },
+  animate: { x: 0 },
+  exit: { x: 300 }
 }
 
-function AnimateDiv({ children }: any) {
+function AnimateLeftDiv({ children }: any) {
   return (
     <motion.div
     variants={animations}
@@ -20,4 +20,4 @@ function AnimateDiv({ children }: any) {
   )
 }
 
-export default AnimateDiv
+export default AnimateLeftDiv

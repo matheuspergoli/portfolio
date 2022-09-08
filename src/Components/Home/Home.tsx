@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import Background from '../Background/Background'
 import Head from '../Helper/Head'
-import AnimateDiv from '../Motion/AnimateDiv'
 
 const ContainerMain = styled.main`
   display: grid;
@@ -61,7 +60,7 @@ const Titulo = styled.h1`
 
 function Home() {
   return (
-    <AnimateDiv>
+    <>
       <Head title='Home' />
       <ContainerMain>
         <Background />
@@ -73,7 +72,7 @@ function Home() {
           Conheça meu trabalho <ArrowImg />
         </Link>
       </ContainerMain>
-    </AnimateDiv>
+    </>
   )
 }
 
