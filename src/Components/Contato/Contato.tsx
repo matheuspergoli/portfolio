@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import useForm from '../../Hooks/useForm'
+import Head from '../Helper/Head'
 import AnimateFadeDiv from '../Motion/AnimateFadeDiv'
 import Input from './Input'
 import OutrosContatos from './OutrosContatos'
@@ -93,6 +94,7 @@ function Contato() {
 
   return (
     <AnimateFadeDiv>
+      <Head title='Contato' />
       <ContainerMain onSubmit={handleSubmit}>
         <Title>
           Tem alguma questão ou gostaria de trabalhar junto?
