@@ -85,6 +85,7 @@ const Title = styled.h1`
   font-size: clamp(1.5rem, 5vw, 2rem);
 
   span {
+    font-weight: 400;
     color: #04c2c9;
   }
 `

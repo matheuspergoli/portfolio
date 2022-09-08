@@ -27,9 +27,14 @@ const ContainerSkills = styled.section`
 
 const Title = styled.h1`
   color: #04c2c9;
-  margin: 20px auto;
+  font-size: 2.25rem;
   width: fit-content;
   text-align: center;
+  margin: 0 auto 20px auto;
+
+  &:not(:first-of-type) {
+    margin: 20px auto;
+  }
 
   &::after {
     content: '';

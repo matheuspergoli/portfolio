@@ -7,6 +7,7 @@ const ContainerSkills = styled.section`
 `
 
 const Title = styled.h1`
+  font-weight: 400;
   font-size: 1.05rem;
   margin-bottom: 10px;
 `
