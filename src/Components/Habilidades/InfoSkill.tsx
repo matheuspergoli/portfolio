@@ -84,11 +84,39 @@ const ContainerMain = styled.main`
 const Title = styled.h1`
   color: #333;
   font-size: clamp(1.7rem, 5vw, 2.25rem);
+  animation-duration: 500ms;
+  animation-name: animateEnter;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-out;
 
   span {
     font-weight: 400;
     color: #04c2c9;
     font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+
+  &:nth-of-type(1) {
+    animation-delay: 200ms;
+  }
+
+  &:nth-of-type(2) {
+    animation-delay: 400ms;
+  }
+
+  &:nth-of-type(3) {
+    animation-delay: 600ms;
+  }
+
+  @keyframes animateEnter {
+    0% {
+      opacity: 0;
+      transform: translateX(200px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 `
 
