@@ -87,12 +87,11 @@ const ContainerMain = styled.main`
 `
 
 const Title = styled.h1`
-  color: #333;
-  font-size: clamp(1.7rem, 5vw, 2.25rem);
   animation-duration: 500ms;
   animation-name: animateEnter;
   animation-fill-mode: backwards;
   animation-timing-function: ease-out;
+  font-size: clamp(1.7rem, 5vw, 2.25rem);
 
   span {
     font-weight: 400;

@@ -22,15 +22,12 @@ const ContainerSkills = styled.section`
   padding: 0 20px 20px 20px;
 
   a {
-    color: #333;
     text-decoration: none;
   }
 `
 
 const Title = styled.h1`
-  color: #333;
   padding: 0 20px;
-  font-size: 2.25rem;
   width: fit-content;
   text-align: center;
   margin: 0 auto 20px auto;
