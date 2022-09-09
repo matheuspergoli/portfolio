@@ -87,15 +87,11 @@ const BtnEnviar = styled.button`
 function Contato() {
   const nome = useForm('nome')
   const email = useForm('email')
-
-  function handleSubmit() {
-
-  }
-
+  
   return (
     <AnimateFadeDiv>
       <Head title='Contato' />
-      <ContainerMain onSubmit={handleSubmit}>
+      <ContainerMain>
         <Title>
           Tem alguma questão ou gostaria de trabalhar junto?
         </Title>
