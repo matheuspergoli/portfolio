@@ -85,7 +85,7 @@ const BtnEnviar = styled.button`
 `
 
 function Contato() {
-  const nome = useForm(false)
+  const nome = useForm('nome')
   const email = useForm('email')
 
   function handleSubmit() {
@@ -99,7 +99,7 @@ function Contato() {
         <Title>
           Tem alguma questão ou gostaria de trabalhar junto?
         </Title>
-        <Formulario action='mailto:heizwow@outlook.com' method='POST' encType='text/plain'>
+        <Formulario>
           <InputGroup>
             <Input type='text' name='nome' placeholder='Nome' {...nome} />
           </InputGroup>
