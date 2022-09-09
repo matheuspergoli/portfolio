@@ -13,6 +13,10 @@ const ContainerMain = styled.main`
   color: white;
   text-align: center;
 
+  h1 {
+    color: white;
+  }
+
   a {
     display: flex;
     gap: 5px;
