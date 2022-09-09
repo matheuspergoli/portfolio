@@ -1,6 +1,8 @@
 import React from 'react'
 import { AiFillGithub as GitImg } from 'react-icons/ai'
 import { FaFacebookF as FaceImg } from 'react-icons/fa'
+import { SiMicrosoftoutlook as OutlookImg } from 'react-icons/si'
+import { SiYahoo as YahooImg } from 'react-icons/si'
 import styled from 'styled-components'
 
 const ContainerMain = styled.main`
@@ -59,6 +61,16 @@ function OutrosContatos() {
         <a href="https://www.facebook.com/matheus.pwal" target='_blank'>
           <ContainerImg>
             <FaceImg />
+          </ContainerImg>
+        </a>
+        <a href="mailto:heizwow@outlook.com" target='_blank'>
+          <ContainerImg>
+            <OutlookImg />
+          </ContainerImg>
+        </a>
+        <a href="mailto:matheus.pergoli2015@yahoo.com" target='_blank'>
+          <ContainerImg>
+            <YahooImg />
           </ContainerImg>
         </a>
       </ContainerMain>
