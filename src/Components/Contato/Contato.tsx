@@ -10,8 +10,6 @@ const ContainerMain = styled.main`
   padding: 0 20px 20px 20px;
 `
 const Title = styled.h1`
-  color: #333;
-  font-size: 2.25rem;
   width: fit-content;
   text-align: center;
   margin: 0 auto 50px auto;
