@@ -9,6 +9,7 @@ const ContainerMain = styled.main`
   display: flex;
   justify-content: center;
   gap: 30px;
+  flex-wrap: wrap;
 `
 const Title = styled.h1`
   width: fit-content;
