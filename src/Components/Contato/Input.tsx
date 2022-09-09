@@ -19,7 +19,6 @@ function Input({ type, name, placeholder, value, error, onChange, onBlur }: Inpu
   return (
     <>
       <input 
-      required
       type={type} 
       name={name}
       id={name}

@@ -6,8 +6,8 @@ const types: any = {
     message: 'Preencha com um email válido'
   },
   nome: {
-    regex: /^(?=.{4,15}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$/,
-    message: 'Preencha com um nome válido'
+    regex: /((?=.*_)^[a-zA-Z][a-zA-Z\s_]{4,18}[a-zA-Z]$)|((?!.*_)^[a-zA-Z][a-zA-Z\s]{4,19}$)/,
+    message: 'Preencha com um nome válido sem números e de no mínimo 5 caracteres'
   }
 }
 
