@@ -16,7 +16,7 @@ function Sobre() {
         <Route path='/' element={<SobreMim />} />
         <Route path='habilidades' element={<Habilidades />} />
         <Route path='habilidades/:id' element={<InfoSkill />} />
-        <Route path='projetos' element={<Projetos />} />
+        <Route path='projetos/*' element={<Projetos />} />
         <Route path='contato' element={<Contato />} />
       </Routes>
       <Footer />

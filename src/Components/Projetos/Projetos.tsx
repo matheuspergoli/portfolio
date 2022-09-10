@@ -1,8 +1,10 @@
 import React from 'react'
+import { Routes, Route } from 'react-router-dom'
 import AnimateFadeDiv from '../Motion/AnimateFadeDiv'
 import styled from 'styled-components'
 import Projeto from './Projeto'
 import Head from '../Helper/Head'
+import VerMais from './VerMais'
 
 const ContainerMain = styled.main`
   padding: 0 20px 20px 20px;
@@ -29,7 +31,10 @@ function Projetos() {
       <Head title='Projetos' />
       <ContainerMain>
         <Title>Projetos</Title>
-        <Projeto />
+        <Routes>
+          <Route path='/' element={<Projeto />} />
+          <Route path='ver-mais' element={<VerMais />} />
+        </Routes>
       </ContainerMain>
     </AnimateFadeDiv>
   )

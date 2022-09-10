@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import styled from 'styled-components'
 import Clipboard from '../../images/clipboard-flexbox.jpg'
@@ -179,35 +180,54 @@ const LinksContainer = styled.section`
     background-color: #04c2c9;
   }
 `
+const Button = styled.button`
+  display: block;
+  cursor: pointer;
+  color: #04c2c9;
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  margin: 50px auto 0 auto;
+  background-color: #333;
+  border: 2px solid #1e242c;
+`
 
 const animations = {
   initial: { opacity: 0 }
 }
 
 function Projeto() {
+  const navigate = useNavigate()
+
+  function handleClick() {
+    navigate('ver-mais')
+  }
+
   return (
-    <Container>
-      {projects.map((projeto) => (
-        <ContainerProjeto 
-        variants={animations}
-        initial='initial'
-        transition={{ duration: 1 }}
-        whileInView={{ opacity: 1 }}
-        key={projeto.nome}>
-          <Title>{projeto.nome}</Title>
-          <ImageContainer>
-            <img src={projeto.source} alt={projeto.nome} />
-            <figcaption>
-              <p>Tech: <span>{projeto.tech}</span></p>
-              <LinksContainer>
-                <a href={projeto.link} target='_blank'>Ir para site</a>
-                <a href={projeto.rep} target='_blank'>Repositório</a>
-              </LinksContainer>
-            </figcaption>
-          </ImageContainer>
-        </ContainerProjeto>
-      ))}
-    </Container>
+    <>
+      <Container>
+        {projects.map((projeto) => (
+          <ContainerProjeto 
+          variants={animations}
+          initial='initial'
+          transition={{ duration: 1 }}
+          whileInView={{ opacity: 1 }}
+          key={projeto.nome}>
+            <Title>{projeto.nome}</Title>
+            <ImageContainer>
+              <img src={projeto.source} alt={projeto.nome} />
+              <figcaption>
+                <p>Tech: <span>{projeto.tech}</span></p>
+                <LinksContainer>
+                  <a href={projeto.link} target='_blank'>Ir para site</a>
+                  <a href={projeto.rep} target='_blank'>Repositório</a>
+                </LinksContainer>
+              </figcaption>
+            </ImageContainer>
+          </ContainerProjeto>
+        ))}
+      </Container>
+      <Button onClick={handleClick}>Ver mais</Button>
+    </>
   )
 }
 
