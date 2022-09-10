@@ -102,7 +102,7 @@ const projects = [
   }
 ]
 
-const Container = styled.section`
+export const Container = styled.section`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -111,7 +111,7 @@ const Container = styled.section`
   margin-top: 100px;
 `
 
-const ContainerProjeto = styled(motion.section)`
+export const ContainerProjeto = styled(motion.section)`
   max-width: 600px;
   max-height: 600px;
   
@@ -121,7 +121,7 @@ const ContainerProjeto = styled(motion.section)`
     border: 3px solid #333;
   }
 `
-const Title = styled(motion.h1)`
+export const Title = styled(motion.h1)`
   position: relative;
   font-size: 1.5rem;
   width: fit-content;
@@ -138,7 +138,7 @@ const Title = styled(motion.h1)`
   }
 `
 
-const ImageContainer = styled.figure`
+export const ImageContainer = styled.figure`
   position: relative;
   
   figcaption {
@@ -167,7 +167,7 @@ const ImageContainer = styled.figure`
   }
 `
 
-const LinksContainer = styled.section`
+export const LinksContainer = styled.section`
   display: flex;
   gap: 10px;
 
