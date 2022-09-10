@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import styled from 'styled-components'
 import useMedia from '../../Hooks/useMedia'
+import curriculo from '../../../curriculo.pdf'
 
 const NavbarContainer = styled.nav`
   display: flex;
@@ -113,7 +114,7 @@ function Navbar() {
         <NavLink to='habilidades'>Habilidades</NavLink>
         <NavLink to='projetos'>Projetos</NavLink>
         <NavLink to='contato'>Contato</NavLink>
-        <a href="../../../curriculo.pdf" download='curriculo'>CV</a>
+        <a href={curriculo} download='curriculo'>CV</a>
       </NavbarContainer>
     </>
   )
