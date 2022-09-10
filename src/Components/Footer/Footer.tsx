@@ -4,11 +4,10 @@ import styled from 'styled-components'
 const FooterContainer = styled.footer`
   color: #333;
   font-weight: 700;
+  margin-top: 35px;
   font-size: 1.5rem;
-  margin-top: 100px;
   text-align: center;
   padding: 0 20px 5px 0;
-  text-decoration: underline;
 
   span {
     font-weight: 400;
