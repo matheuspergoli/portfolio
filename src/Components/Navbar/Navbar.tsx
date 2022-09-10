@@ -111,6 +111,7 @@ function Navbar() {
         <NavLink to='/' end>Home</NavLink>
         <NavLink to='/sobre' end>Sobre</NavLink>
         <NavLink to='habilidades'>Habilidades</NavLink>
+        <NavLink to='projetos'>Projetos</NavLink>
         <NavLink to='contato'>Contato</NavLink>
       </NavbarContainer>
     </>
