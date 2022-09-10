@@ -6,6 +6,7 @@ import SobreMim from './SobreMim'
 import InfoSkill from '../Habilidades/InfoSkill'
 import Contato from '../Contato/Contato'
 import Projetos from '../Projetos/Projetos'
+import Footer from '../Footer/Footer'
 
 function Sobre() {
   return (
@@ -18,6 +19,7 @@ function Sobre() {
         <Route path='projetos' element={<Projetos />} />
         <Route path='contato' element={<Contato />} />
       </Routes>
+      <Footer />
     </>
   )
 }
