@@ -101,7 +101,7 @@ const projects = [
   }
 ]
 
-const Container = styled.main`
+const Container = styled.section`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -151,16 +151,6 @@ const ImageContainer = styled.figure`
     flex-direction: column;
     background-color: #333;
     color: white;
-
-    a {
-      display: none;
-      pointer-events: none;
-    }
-
-    &:hover a {
-      display: block;
-      pointer-events: all;
-    }
 
     &:hover {
       opacity: 1;
