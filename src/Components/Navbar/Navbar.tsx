@@ -113,7 +113,7 @@ function Navbar() {
         <NavLink to='habilidades'>Habilidades</NavLink>
         <NavLink to='projetos'>Projetos</NavLink>
         <NavLink to='contato'>Contato</NavLink>
-        <a href="../../../curriculo.pdf" download='Curriculo-Matheus'>CV</a>
+        <a href="../../../curriculo.pdf" download='curriculo'>CV</a>
       </NavbarContainer>
     </>
   )
