@@ -153,10 +153,12 @@ const ImageContainer = styled.figure`
     color: white;
 
     a {
+      display: none;
       pointer-events: none;
     }
 
     &:hover a {
+      display: block;
       pointer-events: all;
     }
 
