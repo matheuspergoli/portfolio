@@ -92,7 +92,7 @@ const BtnMobile = styled.button`
 `
 
 function Navbar() {
-  const mobile = useMedia('(max-width: 40rem)')
+  const mobile = useMedia('(max-width: 47rem)')
   const [mobileMenu, setMobileMenu] = React.useState(false)
   const { pathname } = useLocation()
 
