@@ -180,7 +180,7 @@ export const LinksContainer = styled.section`
     background-color: #04c2c9;
   }
 `
-const Button = styled.button`
+export const Button = styled.button`
   display: block;
   cursor: pointer;
   color: #04c2c9;
