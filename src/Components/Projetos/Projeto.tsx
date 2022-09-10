@@ -152,6 +152,14 @@ const ImageContainer = styled.figure`
     background-color: #333;
     color: white;
 
+    a {
+      pointer-events: none;
+    }
+
+    &:hover a {
+      pointer-events: all;
+    }
+
     &:hover {
       opacity: 1;
     }
