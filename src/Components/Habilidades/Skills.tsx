@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import { Tooltip, Zoom } from '@mui/material'
 
 const ContainerSkills = styled.section`
   text-align: center;
@@ -41,14 +42,16 @@ interface Props {
 
 function Skills({ title, image }: Props) {
   return (
-    <Link to={`/sobre/habilidades/${title}`}>
-      <ContainerSkills>
-        <Title>{title}</Title>
-        <ContainerImg>
-          {image}
-        </ContainerImg>
-      </ContainerSkills>
-    </Link>
+    <Tooltip title='Clique e saiba mais!' TransitionComponent={Zoom} arrow>
+      <Link to={`/sobre/habilidades/${title}`}>
+        <ContainerSkills>
+          <Title>{title}</Title>
+          <ContainerImg>
+            {image}
+          </ContainerImg>
+        </ContainerSkills>
+      </Link>
+    </Tooltip>
   )
 }
 

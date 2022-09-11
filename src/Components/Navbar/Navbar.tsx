@@ -39,7 +39,7 @@ const NavbarContainer = styled.nav`
 
   a {
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-decoration: none;
     
     &.active {
