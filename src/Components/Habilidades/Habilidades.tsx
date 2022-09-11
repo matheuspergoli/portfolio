@@ -12,6 +12,31 @@ import { AiFillGithub as GitImg } from 'react-icons/ai'
 import { GiBrazilFlag as BrImg } from 'react-icons/gi'
 import Head from '../Helper/Head'
 import AnimateFadeDiv from '../Motion/AnimateFadeDiv'
+import SkillBar from 'react-skillbars'
+
+const skills = [
+  { type: 'HTML5', level: 85},
+  { type: 'CSS3', level: 85},
+  { type: 'JavaScript', level: 70},
+  { type: 'React', level: 60},
+  { type: 'TypeScript', level: 45},
+  { type: 'SC', level: 55},
+  { type: 'Git/Github', level: 60}
+]
+
+const colors = {
+  bar: '#04c2c9',
+  title: {
+    text: '#fff',
+    background: '#333'
+  }
+}
+
+const ContainerBar = styled.section`
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 0 20px 20px 20px;
+`
 
 const ContainerSkills = styled.section`
   display: flex;
@@ -72,6 +97,10 @@ function Habilidades() {
         <Skills title='Inglês-US' image={<ENImg />} />
         <Skills title='Português-BR' image={<BrImg />} />
       </ContainerSkills>
+      <Title>Principais habilidades</Title>
+      <ContainerBar>
+        <SkillBar skills={skills} colors={colors} animationDelay={350} />
+      </ContainerBar>
     </AnimateFadeDiv>
   )
 }
