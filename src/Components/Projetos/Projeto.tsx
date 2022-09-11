@@ -119,6 +119,7 @@ export const ContainerProjeto = styled(motion.section)`
   img {
     display: block;
     max-width: 100%;
+    cursor: pointer;
     border: 3px solid #333;
   }
 `
