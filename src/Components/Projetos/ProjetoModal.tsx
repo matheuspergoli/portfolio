@@ -45,8 +45,8 @@ function ProjetoModal({ tech, link, rep, nome, source }: any) {
       onClose={handleClose}>
         <ModalTitle>Tech: <span>{tech}</span></ModalTitle>
         <ModalContent>
-          <a href={link} target='_blank'>Ir para site</a>
-          <a href={rep} target='_blank'>Repositório</a>
+          <a href={link} target='_blank' onClick={handleClose}>Ir para site</a>
+          <a href={rep} target='_blank' onClick={handleClose}>Repositório</a>
         </ModalContent>
       </Dialog>
     </>
