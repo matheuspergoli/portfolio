@@ -14,6 +14,7 @@ import Snap from '../../images/snap-intro.jpg'
 import SummaryReact from '../../images/summary-react.jpg'
 import Testimonials from '../../images/testimonials.jpg'
 import Trillo from '../../images/trillo.jpg'
+import ProjetoModal from './ProjetoModal'
 
 const projects = [
   {
@@ -138,48 +139,6 @@ export const Title = styled(motion.h1)`
   }
 `
 
-export const ImageContainer = styled.figure`
-  position: relative;
-  
-  figcaption {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    opacity: 0;
-    transition: all 300ms;
-    justify-content: space-evenly;
-    flex-direction: column;
-    background-color: #333;
-    color: white;
-
-    &:hover {
-      opacity: 1;
-    }
-
-    span {
-      color: #04c2c9;
-    }
-
-    p {
-      color: white;
-    }
-  }
-`
-
-export const LinksContainer = styled.section`
-  display: flex;
-  gap: 10px;
-
-  a {
-    display: block;
-    padding: 10px;
-    color: #333;
-    font-size: 1.5rem;
-    text-decoration: none;
-    background-color: #04c2c9;
-  }
-`
 export const Button = styled.button`
   display: block;
   cursor: pointer;
@@ -213,16 +172,14 @@ function Projeto() {
           whileInView={{ opacity: 1 }}
           key={projeto.nome}>
             <Title>{projeto.nome}</Title>
-            <ImageContainer>
-              <img src={projeto.source} alt={projeto.nome} />
-              <figcaption>
-                <p>Tech: <span>{projeto.tech}</span></p>
-                <LinksContainer>
-                  <a href={projeto.link} target='_blank'>Ir para site</a>
-                  <a href={projeto.rep} target='_blank'>Repositório</a>
-                </LinksContainer>
-              </figcaption>
-            </ImageContainer>
+            <section>
+              <ProjetoModal 
+              tech={projeto.tech} 
+              link={projeto.link} 
+              rep={projeto.rep}
+              nome={projeto.nome}
+              source={projeto.source} />
+            </section>
           </ContainerProjeto>
         ))}
       </Container>

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Container, ContainerProjeto, ImageContainer, LinksContainer, Title, Button } from './Projeto'
+import { Container, ContainerProjeto, Title, Button } from './Projeto'
 import AdviceGenerator from '../../images/advice-generator.jpg'
 import BuscadorCep from '../../images/buscador-cep.jpg'
 import FlexBlog from '../../images/flexblog.jpg'
@@ -8,6 +8,7 @@ import Manage from '../../images/manage.jpg'
 import Selfcare from '../../images/selfcare.jpg'
 import TabelaPlanos from '../../images/tabela-planos.jpg'
 import { useNavigate } from 'react-router-dom'
+import ProjetoModal from './ProjetoModal'
 
 const projects = [
   {
@@ -76,16 +77,14 @@ function VerMais() {
           whileInView={{ opacity: 1 }}
           key={projeto.nome}>
             <Title>{projeto.nome}</Title>
-            <ImageContainer>
-              <img src={projeto.source} alt={projeto.nome} />
-              <figcaption>
-                <p>Tech: <span>{projeto.tech}</span></p>
-                <LinksContainer>
-                  <a href={projeto.link} target='_blank'>Ir para site</a>
-                  <a href={projeto.rep} target='_blank'>Repositório</a>
-                </LinksContainer>
-              </figcaption>
-            </ImageContainer>
+            <section>
+            <ProjetoModal 
+              tech={projeto.tech} 
+              link={projeto.link} 
+              rep={projeto.rep}
+              nome={projeto.nome}
+              source={projeto.source} />
+            </section>
           </ContainerProjeto>
           ))}
       </Container>
