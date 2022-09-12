@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { useScroll, useSpring } from 'framer-motion'
-import { Container, ContainerProjeto, Title, Button, ProgressBar } from './Projeto'
+import { Container, ContainerProjeto, Title, Button } from './Projeto'
 import AdviceGenerator from '../../images/advice-generator.jpg'
 import BuscadorCep from '../../images/buscador-cep.jpg'
 import FlexBlog from '../../images/flexblog.jpg'
@@ -11,6 +10,7 @@ import TabelaPlanos from '../../images/tabela-planos.jpg'
 import { useNavigate } from 'react-router-dom'
 import ProjetoModal from './ProjetoModal'
 import { Autocomplete, TextField } from '@mui/material'
+import AnimateProgressBar from '../Motion/AnimateProgressBar'
 
 const projects = [
   {
@@ -92,16 +92,9 @@ function VerMais() {
     setProjetoSelecionado(projetoAtual)
   }, [inputValue])
 
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001
-  })
-
   return (
     <>
-      <ProgressBar style={{ scaleX }} />
+      <AnimateProgressBar />
 
       <Autocomplete 
       disablePortal
