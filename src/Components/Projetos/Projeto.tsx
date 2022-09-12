@@ -15,6 +15,7 @@ import SummaryReact from '../../images/summary-react.jpg'
 import Testimonials from '../../images/testimonials.jpg'
 import Trillo from '../../images/trillo.jpg'
 import ProjetoModal from './ProjetoModal'
+import { Autocomplete, TextField } from '@mui/material'
 
 const projects = [
   {
@@ -103,13 +104,28 @@ const projects = [
   }
 ]
 
+const options = [
+  { label: 'Clipboard Landing Page' },
+  { label: 'Desafio Rafa Ballerini' },
+  { label: 'Four Card Section' },
+  { label: 'Huddle Landing Page' },
+  { label: 'Netflix Login' },
+  { label: 'Nexter' },
+  { label: 'NFT Card React' },
+  { label: 'Portfolio freeCodeCamp' },
+  { label: 'Snap Intro Section' },
+  { label: 'Summary Component React' },
+  { label: 'Testimonials' },
+  { label: 'Trillo' }
+]
+
 export const Container = styled.section`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
   gap: 50px;
-  margin-top: 100px;
+  margin-top: 50px;
 `
 
 export const ContainerProjeto = styled(motion.section)`
@@ -155,15 +171,59 @@ const animations = {
   initial: { opacity: 0 }
 }
 
+type ProjetoProps = {
+  nome: string,
+  source: string,
+  tech: string,
+  link: string,
+  rep: string
+}[]
+
 function Projeto() {
   const navigate = useNavigate()
+  const [inputValue, setInputValue] = React.useState('')
+  const [projetoSelecionado, setProjetoSelecionado] = React.useState<ProjetoProps>([])
 
   function handleClick() {
     navigate('ver-mais')
   }
 
+  React.useEffect(() => {
+    const projetoAtual = projects.filter((projeto) => projeto.nome === inputValue)
+    setProjetoSelecionado(projetoAtual)
+  }, [inputValue])
+
   return (
     <>
+      <Autocomplete 
+      disablePortal
+      inputValue={inputValue}
+      onInputChange={(event, newInputValue) => setInputValue(newInputValue)}
+      options={options}
+      sx={{ maxWidth: 350, margin: '50px auto 0 auto' }}
+      renderInput={(params) => <TextField {...params} label='Projetos' />} />
+
+      {projetoSelecionado && projetoSelecionado.map((projeto) => (
+        <Container key={projeto.nome}>
+          <ContainerProjeto 
+          variants={animations}
+          initial='initial'
+          transition={{ duration: 1 }}
+          whileInView={{ opacity: 1 }}
+          key={projeto.nome}>
+            <Title>{projeto.nome}</Title>
+            <section>
+              <ProjetoModal 
+              tech={projeto.tech} 
+              link={projeto.link} 
+              rep={projeto.rep}
+              nome={projeto.nome}
+              source={projeto.source} />
+            </section>
+          </ContainerProjeto>
+        </Container>
+      ))}
+
       <Container>
         {projects.map((projeto) => (
           <ContainerProjeto 

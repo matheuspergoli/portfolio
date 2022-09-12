@@ -9,6 +9,7 @@ import Selfcare from '../../images/selfcare.jpg'
 import TabelaPlanos from '../../images/tabela-planos.jpg'
 import { useNavigate } from 'react-router-dom'
 import ProjetoModal from './ProjetoModal'
+import { Autocomplete, TextField } from '@mui/material'
 
 const projects = [
   {
@@ -55,19 +56,72 @@ const projects = [
   },
 ]
 
+const options = [,
+  { label: 'Selfcare' },
+  { label: 'FlexBlog' },
+  { label: 'Tabela de Planos' },
+  { label: 'Buscador CEP' },
+  { label: 'Advice Generator' },
+  { label: 'Manage Landing Page' }
+]
+
 const animations = {
   initial: { opacity: 0 }
 }
 
+type ProjetoProps = {
+  nome: string,
+  source: string,
+  tech: string,
+  link: string,
+  rep: string
+}[]
+
 function VerMais() {
   const navigate = useNavigate()
+  const [inputValue, setInputValue] = React.useState('')
+  const [projetoSelecionado, setProjetoSelecionado] = React.useState<ProjetoProps>([])
 
   function handleClick() {
     navigate('/sobre/projetos')
   }
 
+  React.useEffect(() => {
+    const projetoAtual = projects.filter((projeto) => projeto.nome === inputValue)
+    setProjetoSelecionado(projetoAtual)
+  }, [inputValue])
+
   return (
     <>
+      <Autocomplete 
+      disablePortal
+      inputValue={inputValue}
+      onInputChange={(event, newInputValue) => setInputValue(newInputValue)}
+      options={options}
+      sx={{ maxWidth: 350, margin: '50px auto 0 auto' }}
+      renderInput={(params) => <TextField {...params} label='Projetos' />} />
+
+      {projetoSelecionado && projetoSelecionado.map((projeto) => (
+        <Container key={projeto.nome}>
+          <ContainerProjeto 
+          variants={animations}
+          initial='initial'
+          transition={{ duration: 1 }}
+          whileInView={{ opacity: 1 }}
+          key={projeto.nome}>
+            <Title>{projeto.nome}</Title>
+            <section>
+              <ProjetoModal 
+              tech={projeto.tech} 
+              link={projeto.link} 
+              rep={projeto.rep}
+              nome={projeto.nome}
+              source={projeto.source} />
+            </section>
+          </ContainerProjeto>
+        </Container>
+      ))}
+
       <Container>
         {projects.map((projeto) => (
           <ContainerProjeto 
