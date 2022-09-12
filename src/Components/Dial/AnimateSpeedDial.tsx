@@ -1,20 +1,34 @@
 import React from 'react'
+import styled from 'styled-components'
 import { AiFillGithub as GitImg } from 'react-icons/ai'
 import { FaFacebookF as FaceImg } from 'react-icons/fa'
 import { SiMicrosoftoutlook as OutlookImg } from 'react-icons/si'
 import { SiYahoo as YahooImg } from 'react-icons/si'
 import { Box, SpeedDial, SpeedDialIcon, SpeedDialAction } from '@mui/material'
 
+const Link = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  font-size: 1.5rem;
+
+  svg {
+    width: 100%;
+    color: #04c2c9;
+  }
+`
+
 const actions = [
-  { icon: <GitImg style={{ fontSize: '1.5rem' }} />, nome: 'Github' },
-  { icon: <FaceImg style={{ fontSize: '1.5rem' }} />, nome: 'Facebook' },
-  { icon: <OutlookImg style={{ fontSize: '1.5rem' }} />, nome: 'Outlook' },
-  { icon: <YahooImg style={{ fontSize: '1.5rem' }} />, nome: 'Yahoo', }
+  { icon: <Link href="https://github.com/matheuspergoli" target='_blank'> <GitImg /> </Link>, nome: 'Github' },
+  { icon: <Link href="https://www.facebook.com/matheus.pwal" target='_blank'> <FaceImg /> </Link>, nome: 'Facebook' },
+  { icon: <Link href="mailto:heizwow@outlook.com" target='_blank'> <OutlookImg /> </Link>, nome: 'Outlook' },
+  { icon: <Link href="mailto:matheus.pergoli2015@yahoo.com" target='_blank'> <YahooImg /> </Link>, nome: 'Yahoo', }
 ]
 
 function AnimateSpeedDial() {
   return (
-    <Box sx={{ height: 320, flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1 }}>
       <SpeedDial
       ariaLabel='SpeedDial'
       icon={<SpeedDialIcon />}
@@ -24,9 +38,8 @@ function AnimateSpeedDial() {
           <SpeedDialAction
           key={action.nome}
           icon={action.icon}
-          FabProps={{ size: 'medium' }}
-          sx={{ backgroundColor: '#333', color: '#04c2c9' }}
-          tooltipTitle={action.nome} />
+          tooltipTitle={action.nome}
+          FabProps={{ size: 'medium', style: { backgroundColor: '#333' } }} />
         ))}
       </SpeedDial>
     </Box>
