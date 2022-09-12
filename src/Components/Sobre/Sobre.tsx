@@ -7,6 +7,7 @@ import InfoSkill from '../Habilidades/InfoSkill'
 import Contato from '../Contato/Contato'
 import Projetos from '../Projetos/Projetos'
 import Footer from '../Footer/Footer'
+import AnimateSpeedDial from '../Dial/AnimateSpeedDial'
 
 function Sobre() {
   return (
@@ -20,6 +21,7 @@ function Sobre() {
         <Route path='contato' element={<Contato />} />
       </Routes>
       <Footer />
+      <AnimateSpeedDial />
     </>
   )
 }
