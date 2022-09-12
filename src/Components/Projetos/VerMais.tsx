@@ -95,11 +95,12 @@ function VerMais() {
     <>
       <Autocomplete 
       disablePortal
+      noOptionsText={'Nada encontrado'}
       inputValue={inputValue}
       onInputChange={(event, newInputValue) => setInputValue(newInputValue)}
       options={options}
       sx={{ maxWidth: 350, margin: '50px auto 0 auto' }}
-      renderInput={(params) => <TextField {...params} label='Projetos' />} />
+      renderInput={(params) => <TextField {...params} label='Procure por projetos' />} />
 
       {projetoSelecionado && projetoSelecionado.map((projeto) => (
         <Container key={projeto.nome}>
