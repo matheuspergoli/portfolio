@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Container, ContainerProjeto, Title, Button } from './Projeto'
+import { useScroll, useSpring } from 'framer-motion'
+import { Container, ContainerProjeto, Title, Button, ProgressBar } from './Projeto'
 import AdviceGenerator from '../../images/advice-generator.jpg'
 import BuscadorCep from '../../images/buscador-cep.jpg'
 import FlexBlog from '../../images/flexblog.jpg'
@@ -91,8 +92,17 @@ function VerMais() {
     setProjetoSelecionado(projetoAtual)
   }, [inputValue])
 
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  })
+
   return (
     <>
+      <ProgressBar style={{ scaleX }} />
+
       <Autocomplete 
       disablePortal
       noOptionsText={'Nada encontrado'}

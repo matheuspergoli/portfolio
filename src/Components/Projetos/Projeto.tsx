@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import { motion, useScroll, useSpring } from 'framer-motion'
 import styled from 'styled-components'
 import Clipboard from '../../images/clipboard-flexbox.jpg'
 import Desafio from '../../images/desafio-ballerini.jpg'
@@ -167,6 +167,17 @@ export const Button = styled.button`
   border: 2px solid #1e242c;
 `
 
+export const ProgressBar = styled(motion.div)`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  transform-origin: 0%;
+  background-color: #04c2c9;
+  z-index: 1000;
+`
+
 const animations = {
   initial: { opacity: 0 }
 }
@@ -193,8 +204,17 @@ function Projeto() {
     setProjetoSelecionado(projetoAtual)
   }, [inputValue])
 
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  })
+
   return (
     <>
+      <ProgressBar style={{ scaleX }} />
+
       <Autocomplete 
       disablePortal
       noOptionsText={'Nada encontrado'}
