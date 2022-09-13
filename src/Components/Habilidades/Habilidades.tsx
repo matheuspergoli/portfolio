@@ -78,24 +78,24 @@ function Habilidades() {
       <Head title='Habilidades' />
       <Title>Minhas habilidades</Title>
       <ContainerSkills>
-        <Skills title='HTML5' image={<HtmlImg />} />
-        <Skills title='CSS3' image={<CSSImg />} />
-        <Skills title='JavaScript' image={<JSImg />} />
-        <Skills title='React' image={<ReactImg />} />
-        <Skills title='TypeScript' image={<TSImg />} />
-        <Skills title='Styled-Components' image={<StyledImg />} />
+        <Skills index={1} title='HTML5' image={<HtmlImg />} />
+        <Skills index={2} title='CSS3' image={<CSSImg />} />
+        <Skills index={3} title='JavaScript' image={<JSImg />} />
+        <Skills index={4} title='React' image={<ReactImg />} />
+        <Skills index={5} title='TypeScript' image={<TSImg />} />
+        <Skills index={6} title='Styled-Components' image={<StyledImg />} />
       </ContainerSkills>
       <Title>Outros Conhecimentos</Title>
       <ContainerSkills>
-        <Skills title='Responsividade' image={<PhoneImg />} />
-        <Skills title='TailwindCSS' image={<TailImg />} />
-        <Skills title='SCSS' image={<SassImg />} />
-        <Skills title='Git-Github' image={<GitImg />} />
+        <Skills index={7} title='Responsividade' image={<PhoneImg />} />
+        <Skills index={8} title='TailwindCSS' image={<TailImg />} />
+        <Skills index={9} title='SCSS' image={<SassImg />} />
+        <Skills index={10} title='Git-Github' image={<GitImg />} />
       </ContainerSkills>
       <Title>Idiomas</Title>
       <ContainerSkills>
-        <Skills title='Inglês-US' image={<ENImg />} />
-        <Skills title='Português-BR' image={<BrImg />} />
+        <Skills index={11} title='Inglês-US' image={<ENImg />} />
+        <Skills index={12} title='Português-BR' image={<BrImg />} />
       </ContainerSkills>
       <Title>Principais habilidades</Title>
       <ContainerBar>

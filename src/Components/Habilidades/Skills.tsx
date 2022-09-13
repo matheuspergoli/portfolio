@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { Tooltip, Zoom } from '@mui/material'
+import { motion } from 'framer-motion'
 
 const ContainerSkills = styled.section`
   text-align: center;
@@ -37,21 +38,27 @@ const ContainerImg = styled.figure`
 
 interface Props {
   title: string,
-  image: any
+  image: any,
+  index: number
 }
 
-function Skills({ title, image }: Props) {
+function Skills({ title, image, index }: Props) {
   return (
-    <Tooltip title='Clique e saiba mais!' TransitionComponent={Zoom} arrow>
-      <Link to={`/sobre/habilidades/${title}`}>
-        <ContainerSkills>
-          <Title>{title}</Title>
-          <ContainerImg>
-            {image}
-          </ContainerImg>
-        </ContainerSkills>
-      </Link>
-    </Tooltip>
+    <motion.div
+    initial={{ opacity: 0, translateX: -50, translateY: -50 }}
+    animate={{ opacity: 1, translateX: 0, translateY: 0 }}
+    transition={{ duration: 0.5, delay: index * 0.05 }}>
+      <Tooltip title='Clique e saiba mais!' TransitionComponent={Zoom} arrow>
+        <Link to={`/sobre/habilidades/${title}`}>
+          <ContainerSkills>
+            <Title>{title}</Title>
+            <ContainerImg>
+              {image}
+            </ContainerImg>
+          </ContainerSkills>
+        </Link>
+      </Tooltip>
+    </motion.div>
   )
 }
 
