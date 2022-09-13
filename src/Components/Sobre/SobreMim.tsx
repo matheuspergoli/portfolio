@@ -34,7 +34,7 @@ const Title = styled.h1`
 `
 
 const SaberMaisTitle = styled.h1`
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   text-align: center;
   margin: 20px 0;
 `
