@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { Tooltip, Zoom } from '@mui/material'
-import { motion } from 'framer-motion'
+import AnimateStaggered from '../Motion/AnimateStaggered'
 
 const ContainerSkills = styled.section`
   text-align: center;
@@ -44,10 +44,7 @@ interface Props {
 
 function Skills({ title, image, index }: Props) {
   return (
-    <motion.div
-    initial={{ opacity: 0, translateX: -50, translateY: -50 }}
-    animate={{ opacity: 1, translateX: 0, translateY: 0 }}
-    transition={{ duration: 0.5, delay: index * 0.05 }}>
+    <AnimateStaggered index={index}>
       <Tooltip title='Clique e saiba mais!' TransitionComponent={Zoom} arrow>
         <Link to={`/sobre/habilidades/${title}`}>
           <ContainerSkills>
@@ -58,7 +55,7 @@ function Skills({ title, image, index }: Props) {
           </ContainerSkills>
         </Link>
       </Tooltip>
-    </motion.div>
+    </AnimateStaggered>
   )
 }
 
