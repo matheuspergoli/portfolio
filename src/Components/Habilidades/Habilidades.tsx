@@ -15,12 +15,12 @@ import AnimateFadeDiv from '../Motion/AnimateFadeDiv'
 import SkillBar from 'react-skillbars'
 
 const skills = [
-  { type: 'HTML5', level: 85},
-  { type: 'CSS3', level: 85},
+  { type: 'HTML5', level: 80},
+  { type: 'CSS3', level: 80},
   { type: 'JavaScript', level: 70},
-  { type: 'React', level: 60},
-  { type: 'TypeScript', level: 45},
-  { type: 'SC', level: 55},
+  { type: 'React', level: 55},
+  { type: 'TypeScript', level: 40},
+  { type: 'SC', level: 50},
   { type: 'Git/Github', level: 60}
 ]
 
