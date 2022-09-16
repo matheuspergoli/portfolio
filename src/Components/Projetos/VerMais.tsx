@@ -7,12 +7,28 @@ import FlexBlog from '../../images/flexblog.jpg'
 import Manage from '../../images/manage.jpg'
 import Selfcare from '../../images/selfcare.jpg'
 import TabelaPlanos from '../../images/tabela-planos.jpg'
+import CountriesAPI from '../../images/countries-api.jpg'
+import IntroComponent from '../../images/intro-component.jpg'
 import { useNavigate } from 'react-router-dom'
 import ProjetoModal from './ProjetoModal'
 import { Autocomplete, TextField } from '@mui/material'
 import AnimateProgressBar from '../Motion/AnimateProgressBar'
 
 const projects = [
+  {
+    nome: 'Intro Component',
+    source: IntroComponent,
+    tech: 'HTML/CSS & JS',
+    link: 'https://matheuspergoli.github.io/intro-component/',
+    rep: 'https://github.com/matheuspergoli/intro-component'
+  },
+  {
+    nome: 'REST Countries API',
+    source: CountriesAPI,
+    tech: 'React/Typescript',
+    link: 'https://countries-api-web.vercel.app/',
+    rep: 'https://github.com/matheuspergoli/countries-api'
+  },
   {
     nome: 'Selfcare',
     source: Selfcare,
@@ -58,6 +74,8 @@ const projects = [
 ]
 
 const options = [,
+  { label: 'REST Countries API' },
+  { label: 'Intro Component' },
   { label: 'Selfcare' },
   { label: 'FlexBlog' },
   { label: 'Tabela de Planos' },
