@@ -5,6 +5,7 @@ import Head from '../Helper/Head'
 import AnimateFadeDiv from '../Motion/AnimateFadeDiv'
 import Input from './Input'
 import OutrosContatos from './OutrosContatos'
+import emailjs from '@emailjs/browser'
 
 const ContainerMain = styled.main`
   padding: 0 20px 20px 20px;
@@ -80,12 +81,46 @@ const BtnEnviar = styled.button`
   padding: 5px 20px;
   border: 2px solid white;
   background-color: transparent;
+
+  &:disabled {
+    opacity: 0.3;
+  }
 `
 
 function Contato() {
   const nome = useForm('nome')
   const email = useForm('email')
+  const [mensagem, setMensagem] = React.useState('')
+  const [enviando, setEnviando] = React.useState(false)
   
+  function enviarEmail(event: any) {
+    event.preventDefault()
+    if (nome.validate() && email.validate() && mensagem.length > 0) {
+      const templateParams = {
+        from_name: nome.value,
+        message: mensagem,
+        email: email.value
+      }
+      const serviceID = import.meta.env.VITE_SERVICE_ID
+      const templateID = import.meta.env.VITE_TEMPLATE_ID
+      const publicKey = import.meta.env.VITE_PUBLIC_KEY
+      setEnviando(true)
+      emailjs.send(serviceID, templateID, templateParams, publicKey)
+      .then((response) => {
+        nome.setValue('')
+        email.setValue('')
+        setMensagem('')
+        setEnviando(false)
+        alert('Enviado!')
+      })
+      .catch((error) => {
+        alert('Algo deu errado! preencha os campos corretamente')
+      })
+    } else {
+      alert('Preencha os campos corretamente')
+    }
+  }
+
   return (
     <AnimateFadeDiv>
       <Head title='Contato' />
@@ -93,15 +128,21 @@ function Contato() {
         <Title>
           Tem alguma questão ou gostaria de trabalhar junto?
         </Title>
-        <Formulario>
+        <Formulario onSubmit={enviarEmail}>
           <InputGroup>
             <Input type='text' name='nome' placeholder='Nome' {...nome} />
           </InputGroup>
           <InputGroup>
             <Input type='email' name='email' placeholder='Email' {...email} />
           </InputGroup>
-          <TextArea placeholder='Sua mensagem aqui' />
-          <BtnEnviar type='submit'>Enviar</BtnEnviar>
+          <TextArea 
+            value={mensagem} 
+            placeholder='Sua mensagem aqui'
+            onChange={({target}) => setMensagem(target.value)}
+          />
+          {enviando ? <BtnEnviar type='submit' disabled>Enviando...</BtnEnviar> : (
+            <BtnEnviar type='submit'>Enviar</BtnEnviar>
+          )}
         </Formulario>
         <OutrosContatos />
       </ContainerMain>
