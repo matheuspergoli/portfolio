@@ -101,11 +101,8 @@ function Contato() {
         message: mensagem,
         email: email.value
       }
-      const serviceID = import.meta.env.VITE_SERVICE_ID
-      const templateID = import.meta.env.VITE_TEMPLATE_ID
-      const publicKey = import.meta.env.VITE_PUBLIC_KEY
       setEnviando(true)
-      emailjs.send(serviceID, templateID, templateParams, publicKey)
+      emailjs.send('service_g1xeump', 'template_8gmoiuu', templateParams, '5pOUpb3kg4-JOEzIV')
       .then((response) => {
         nome.setValue('')
         email.setValue('')
