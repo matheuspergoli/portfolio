@@ -6,7 +6,7 @@ import BuscadorCep from '../../images/buscador-cep.jpg'
 import FlexBlog from '../../images/flexblog.jpg'
 import Manage from '../../images/manage.jpg'
 import Selfcare from '../../images/selfcare.jpg'
-import TabelaPlanos from '../../images/tabela-planos.jpg'
+import RickAndMorty from '../../images/rick-and-morty.jpg'
 import CountriesAPI from '../../images/countries-api.jpg'
 import IntroComponent from '../../images/intro-component.jpg'
 import { useNavigate } from 'react-router-dom'
@@ -16,11 +16,11 @@ import AnimateProgressBar from '../Motion/AnimateProgressBar'
 
 const projects = [
   {
-    nome: 'Intro Component',
-    source: IntroComponent,
-    tech: 'HTML/CSS & JS',
-    link: 'https://matheuspergoli.github.io/intro-component/',
-    rep: 'https://github.com/matheuspergoli/intro-component'
+    nome: 'Rick and Morty API',
+    source: RickAndMorty,
+    tech: 'React/Typescript & SCSS',
+    link: 'https://app-rick-and-morty-api.vercel.app/',
+    rep: 'https://github.com/matheuspergoli/rick-and-morty-api'
   },
   {
     nome: 'REST Countries API',
@@ -28,6 +28,13 @@ const projects = [
     tech: 'React/Typescript',
     link: 'https://countries-api-web.vercel.app/',
     rep: 'https://github.com/matheuspergoli/countries-api'
+  },
+  {
+    nome: 'Intro Component',
+    source: IntroComponent,
+    tech: 'HTML/CSS & JS',
+    link: 'https://matheuspergoli.github.io/intro-component/',
+    rep: 'https://github.com/matheuspergoli/intro-component'
   },
   {
     nome: 'Selfcare',
@@ -42,13 +49,6 @@ const projects = [
     tech: 'HTML/CSS & JS',
     link: 'https://matheuspergoli.github.io/flexblog/',
     rep: 'https://github.com/matheuspergoli/flexblog'
-  },
-  {
-    nome: 'Tabela de Planos',
-    source: TabelaPlanos,
-    tech: 'HTML/SCSS',
-    link: 'https://matheuspergoli.github.io/plans-table/',
-    rep: 'https://github.com/matheuspergoli/plans-table'
   },
   {
     nome: 'Buscador CEP',
