@@ -78,7 +78,7 @@ const options = [,
   { label: 'Intro Component' },
   { label: 'Selfcare' },
   { label: 'FlexBlog' },
-  { label: 'Tabela de Planos' },
+  { label: 'Rick and Morty API' },
   { label: 'Buscador CEP' },
   { label: 'Advice Generator' },
   { label: 'Manage Landing Page' }
