@@ -105,7 +105,7 @@ function Habilidades() {
 			</ContainerSkills>
 			<Title>Principais habilidades</Title>
 			<ContainerBar>
-				<SkillBar skills={skills} colors={colors} animationDelay={350} />
+				<SkillBar skills={skills} colors={colors} animationDelay={250} />
 			</ContainerBar>
 		</AnimateFadeDiv>
 	)
