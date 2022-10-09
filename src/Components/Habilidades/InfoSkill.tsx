@@ -21,6 +21,11 @@ const info = [
     descricao: 'Línguagem de Programação'
   },
   {
+    skill: 'NextJS',
+    nivel: 'Básico/Intermediário',
+    descricao: 'Framework baseado em React para criação de páginas SPA, SRR, SSG'
+  },
+  {
     skill: 'React',
     nivel: 'Básico/Intermediário',
     descricao: 'Biblioteca baseada em JS para criação de SPA'
