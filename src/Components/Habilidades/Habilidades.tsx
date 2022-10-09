@@ -22,6 +22,7 @@ const skills = [
 	{ type: 'HTML5', level: 80 },
 	{ type: 'CSS3', level: 80 },
 	{ type: 'JavaScript', level: 70 },
+	{ type: 'NextJS', level: 55 },
 	{ type: 'React', level: 55 },
 	{ type: 'TypeScript', level: 40 },
 	{ type: 'SC', level: 50 },
