@@ -106,7 +106,10 @@ const projects = [
 ]
 
 const options = [
-	,
+	{ label: 'Aluratube' },
+	{ label: 'React Movie' },
+	{ label: 'The Meal DB' },
+	{ label: 'Pokenext' },
 	{ label: 'REST Countries API' },
 	{ label: 'Intro Component' },
 	{ label: 'Selfcare' },
