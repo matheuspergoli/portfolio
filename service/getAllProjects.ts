@@ -17,21 +17,6 @@ const query = gql`
 	}
 `
 
-interface Projeto {
-	id: string
-	link: string
-	nome: string
-	repositorio: string
-	tecnologias: string
-	imagem: {
-		url: string
-	}
-}
-
-interface Projetos {
-	allProjetos: Array<Projeto>
-}
-
 async function getAllProjects() {
 	const graphQLClient = new GraphQLClient(endpoint, {
 		headers: {
