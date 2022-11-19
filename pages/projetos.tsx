@@ -82,7 +82,7 @@ function Projetos() {
 			<Head>
 				<title>Projetos</title>
 			</Head>
-			<main className='p-3'>
+			<main className='pt-20 px-3 md:p-3'>
 				<Title>Projetos</Title>
 
 				<Autocomplete

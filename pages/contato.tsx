@@ -44,7 +44,7 @@ function Contato() {
 			<Head>
 				<title>Contato</title>
 			</Head>
-			<main className='p-3'>
+			<main className='pt-20 px-3 md:p-3'>
 				<Title>Tem alguma questão ou gostaria de trabalhar junto?</Title>
 				<Formik
 					initialValues={{ nome: '', email: '', msg: '' }}

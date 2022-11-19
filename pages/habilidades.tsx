@@ -39,7 +39,7 @@ function Habilidades() {
 			<Head>
 				<title>Habilidades</title>
 			</Head>
-			<main className='p-3'>
+			<main className='pt-20 px-3 md:p-3'>
 				<Title>Minhas Habilidades</Title>
 				<section className='flex flex-wrap items-center justify-evenly gap-2 pl-5 pr-5 pb-5'>
 					<Skills index={1} title='HTML5' image={<HtmlImg className='group-hover:scale-125 transition' />} />

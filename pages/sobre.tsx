@@ -8,7 +8,7 @@ function Sobre() {
 			<Head>
 				<title>Sobre</title>
 			</Head>
-			<main className='p-3'>
+			<main className='pt-20 px-3 md:p-3'>
 				<h1 className='text-4xl relative font-bold mb-5 after:content-[""] after:absolute after:block after:w-28 after:h-2 after:rounded-md after:bg-main-black'>
 					Quem sou eu ?
 				</h1>
