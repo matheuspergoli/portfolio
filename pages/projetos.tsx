@@ -55,17 +55,6 @@ const animations = {
 	initial: { opacity: 0 }
 }
 
-interface Projeto {
-	id: string
-	link: string
-	nome: string
-	repositorio: string
-	tecnologias: string
-	imagem: {
-		url: string
-	}
-}
-
 function Projetos() {
 	const [inputValue, setInputValue] = React.useState('')
 	const [projetoSelecionado, setProjetoSelecionado] = React.useState<Array<Projeto>>()
