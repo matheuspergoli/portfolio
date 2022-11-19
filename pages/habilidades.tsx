@@ -15,14 +15,14 @@ import { SiHtml5 as HtmlImg, SiJavascript as JSImg } from 'react-icons/si'
 import { SiTypescript as TSImg, SiStyledcomponents as StyledImg } from 'react-icons/si'
 
 const skills = [
-	{ type: 'HTML5', level: 80 },
-	{ type: 'CSS3', level: 80 },
+	{ type: 'HTML5', level: 75 },
+	{ type: 'CSS3', level: 75 },
 	{ type: 'JavaScript', level: 70 },
 	{ type: 'NextJS', level: 60 },
-	{ type: 'React', level: 60 },
-	{ type: 'TypeScript', level: 55 },
-	{ type: 'TailwindCSS', level: 65 },
-	{ type: 'Git/Github', level: 60 }
+	{ type: 'ReactJS', level: 60 },
+	{ type: 'TypeScript', level: 50 },
+	{ type: 'TailwindCSS', level: 60 },
+	{ type: 'Git/Github', level: 55 }
 ]
 
 const colors = {
@@ -45,9 +45,9 @@ function Habilidades() {
 					<Skills index={1} title='HTML5' image={<HtmlImg className='group-hover:scale-125 transition' />} />
 					<Skills index={2} title='CSS3' image={<CSSImg className='group-hover:scale-125 transition' />} />
 					<Skills index={3} title='JavaScript' image={<JSImg className='group-hover:scale-125 transition' />} />
-					<Skills index={4} title='NextJS' image={<Nextjs className='group-hover:scale-125 transition' />} />
-					<Skills index={5} title='React' image={<ReactImg className='group-hover:scale-125 transition' />} />
 					<Skills index={6} title='TypeScript' image={<TSImg className='group-hover:scale-125 transition' />} />
+					<Skills index={5} title='ReactJS' image={<ReactImg className='group-hover:scale-125 transition' />} />
+					<Skills index={4} title='NextJS' image={<Nextjs className='group-hover:scale-125 transition' />} />
 					<Skills index={7} title='Styled-Components' image={<StyledImg className='group-hover:scale-125 transition' />} />
 				</section>
 				<Title>Outros Conhecimentos</Title>
