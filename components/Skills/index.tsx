@@ -1,12 +1,6 @@
 import { Tooltip, Zoom } from '@mui/material'
 import AnimateStaggered from '../../animation/AnimateStaggered'
 
-interface SkillsProps {
-	title: string
-	image: any
-	index: number
-}
-
 function Skills(props: SkillsProps) {
 	return (
 		<AnimateStaggered index={props.index}>
