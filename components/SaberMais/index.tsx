@@ -6,7 +6,7 @@ function SaberMais() {
 
 	return (
 		<>
-			<h2 className='text-2xl text-center mb-5 font-semibold mt-20'>Gostaria de saber um pouco mais ?</h2>
+			<h2 className='text-2xl text-center mb-5 font-semibold mt-20'>Clique no círculo para saber um pouco mais!</h2>
 			<motion.section
 				layout
 				initial={{ borderRadius: 50 }}
