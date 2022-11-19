@@ -1,14 +1,6 @@
 import React from 'react'
 import { Dialog, DialogTitle, DialogContent } from '@mui/material'
 
-interface ProjetoModalProps {
-	tech: string
-	link: string
-	rep: string
-	nome: string
-	source: string
-}
-
 function ProjetoModal(props: ProjetoModalProps) {
 	const [open, setOpen] = React.useState(false)
 	const handleOpen = () => setOpen(true)
