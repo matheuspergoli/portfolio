@@ -24,10 +24,12 @@ export const getStaticProps: GetStaticProps = async () => {
 
 const options = [
 	{ label: 'Aluratube' },
+	{ label: 'Next Blog' },
 	{ label: 'React Movies' },
 	{ label: 'The Meal DB' },
 	{ label: 'Pokenext' },
 	{ label: 'Rick and Morty API' },
+	{ label: 'Template Admin' },
 	{ label: 'DIO - Cadastro' },
 	{ label: 'Countries API' },
 	{ label: 'Portfolio freeCodeCamp' },
