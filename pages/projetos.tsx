@@ -25,6 +25,7 @@ export const getStaticProps: GetStaticProps = async () => {
 const options = [
 	{ label: 'Aluratube' },
 	{ label: 'Next Blog' },
+	{ label: 'Next Tube' },
 	{ label: 'React Movies' },
 	{ label: 'The Meal DB' },
 	{ label: 'Pokenext' },
