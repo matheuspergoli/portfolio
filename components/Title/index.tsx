@@ -2,7 +2,7 @@ function Title(props: { children: string }) {
 	return (
 		<h1
 			className={`
-				text-4xl 
+				text-3xl 
 				text-center
 				font-bold 
 				mb-5
