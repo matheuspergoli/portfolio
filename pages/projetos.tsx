@@ -61,6 +61,7 @@ const animations = {
 function Projetos() {
 	const [inputValue, setInputValue] = React.useState('')
 	const modalDisclaimerRef = React.useRef<HTMLDialogElement>(null)
+	const [modalAlreadyOpen, setModalAlreadyOpen] = React.useState(false)
 	const [projetoSelecionado, setProjetoSelecionado] = React.useState<Array<Projeto>>()
 	const { data, status } = useQuery({ queryKey: ['projects'], queryFn: getAllProjects })
 
@@ -69,12 +70,14 @@ function Projetos() {
 	}
 
 	React.useEffect(() => {
-		if (modalDisclaimerRef.current) {
-			modalDisclaimerRef.current.hasAttribute('open') ? null : modalDisclaimerRef.current.showModal()
-		}
 		const projetoAtual = data?.allProjetos.filter((projeto) => projeto.nome === inputValue)
 		setProjetoSelecionado(projetoAtual)
-	}, [inputValue, data?.allProjetos])
+		if (modalDisclaimerRef.current) {
+			if (modalAlreadyOpen) return
+			setModalAlreadyOpen(true)
+			modalDisclaimerRef.current.hasAttribute('open') ? null : modalDisclaimerRef.current.showModal()
+		}
+	}, [inputValue, data?.allProjetos, modalAlreadyOpen])
 
 	if (status === 'loading') return <Title>Carregando projetos...</Title>
 	return (
@@ -137,7 +140,7 @@ function Projetos() {
 				<div className='flex flex-wrap justify-evenly items-center gap-12 mt-12'>
 					{data?.allProjetos.map((projeto) => (
 						<motion.div
-							className='max-w-2xl max-h-2xl'
+							className='max-w-xl max-h-2xl'
 							variants={animations}
 							initial='initial'
 							transition={{ duration: 1 }}
