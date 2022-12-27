@@ -60,10 +60,18 @@ const animations = {
 
 function Projetos() {
 	const [inputValue, setInputValue] = React.useState('')
+	const modalDisclaimerRef = React.useRef<HTMLDialogElement>(null)
 	const [projetoSelecionado, setProjetoSelecionado] = React.useState<Array<Projeto>>()
 	const { data, status } = useQuery({ queryKey: ['projects'], queryFn: getAllProjects })
 
+	const closeModal = () => {
+		modalDisclaimerRef.current?.close()
+	}
+
 	React.useEffect(() => {
+		if (modalDisclaimerRef.current) {
+			modalDisclaimerRef.current.hasAttribute('open') ? null : modalDisclaimerRef.current.showModal()
+		}
 		const projetoAtual = data?.allProjetos.filter((projeto) => projeto.nome === inputValue)
 		setProjetoSelecionado(projetoAtual)
 	}, [inputValue, data?.allProjetos])
@@ -162,6 +170,18 @@ function Projetos() {
 						</motion.div>
 					))}
 				</div>
+
+				<dialog ref={modalDisclaimerRef} className='backdrop:bg-black backdrop:bg-opacity-75 rounded-lg max-w-lg text-center'>
+					<h1 className='text-2xl font-bold'>DISCLAIMER!!</h1>
+					<p className='text-lg'>Todos os projetos que você verá nessa seção são todos criados de forma independente.</p>
+					<p className='text-lg'>
+						Se você já viu algum projeto listado nessa seção em algum curso, tenha em mente que se ele está listado aqui é porque foi criado de
+						forma independente com meu próprio código e meu próprio conhecimento nas tecnologias envolvidas.
+					</p>
+					<button onClick={closeModal} className='rounded-md px-3 py-2 mt-5 text-white bg-red-500'>
+						Fechar
+					</button>
+				</dialog>
 			</main>
 		</AnimateFadeDiv>
 	)
