@@ -26,6 +26,7 @@ const options = [
 	{ label: 'Aluratube' },
 	{ label: 'Next Blog' },
 	{ label: 'Next Tube' },
+	{ label: 'Sistema de Cadastro' },
 	{ label: 'React Movies' },
 	{ label: 'The Meal DB' },
 	{ label: 'Pokenext' },
