@@ -12,6 +12,7 @@ import { SiMongodb as MongoImg } from 'react-icons/si'
 import { GiBrazilFlag as BrImg } from 'react-icons/gi'
 import { SiMaterialui as MUIimg } from 'react-icons/si'
 import { AiFillGithub as GitImg } from 'react-icons/ai'
+import { SiNestjs as  NestImage } from 'react-icons/si'
 import { TbBrandNextjs as Nextjs } from 'react-icons/tb'
 import { RiEnglishInput as ENImg } from 'react-icons/ri'
 import { SiExpress as ExpressImg } from 'react-icons/si'
@@ -73,36 +74,37 @@ function Habilidades() {
 				<section className='flex flex-wrap items-center justify-evenly gap-2 pl-5 pr-5 pb-5'>
 					<Skills index={12} title='NodeJS' image={<NodeImg className='group-hover:scale-125 transition' />} />
 					<Skills index={13} title='Prisma' image={<PrismaImg className='group-hover:scale-125 transition' />} />
-					<Skills index={14} title='Express' image={<ExpressImg className='group-hover:scale-125 transition' />} />
+					<Skills index={14} title='NestJS' image={<NestImage className='group-hover:scale-125 transition' />} />
+					<Skills index={15} title='Express' image={<ExpressImg className='group-hover:scale-125 transition' />} />
 				</section>
 
 				<Title>Banco de dados</Title>
 				<section className='flex flex-wrap items-center justify-evenly gap-2 pl-5 pr-5 pb-5'>
-					<Skills index={15} title='MySQL 8' image={<MysqlImg className='group-hover:scale-125 transition' />} />
-					<Skills index={16} title='PostgreSQL' image={<PostgreImg className='group-hover:scale-125 transition' />} />
-					<Skills index={17} title='MongoDB' image={<MongoImg className='group-hover:scale-125 transition' />} />
+					<Skills index={16} title='MySQL 8' image={<MysqlImg className='group-hover:scale-125 transition' />} />
+					<Skills index={17} title='PostgreSQL' image={<PostgreImg className='group-hover:scale-125 transition' />} />
+					<Skills index={18} title='MongoDB' image={<MongoImg className='group-hover:scale-125 transition' />} />
 				</section>
 
 				<Title>Backend as a service</Title>
 				<section className='flex flex-wrap items-center justify-evenly gap-2 pl-5 pr-5 pb-5'>
-					<Skills index={18} title='Firebase' image={<FirebaseImg className='group-hover:scale-125 transition' />} />
-					<Skills index={19} title='Supabase' image={<SupabaseImg className='group-hover:scale-125 transition' />} />
+					<Skills index={19} title='Firebase' image={<FirebaseImg className='group-hover:scale-125 transition' />} />
+					<Skills index={20} title='Supabase' image={<SupabaseImg className='group-hover:scale-125 transition' />} />
 				</section>
 
 				<Title>Development Tools</Title>
 				<section className='flex flex-wrap items-center justify-evenly gap-2 pl-5 pr-5 pb-5'>
-					<Skills index={20} title='Vite' image={<ViteImg className='group-hover:scale-125 transition' />} />
+					<Skills index={21} title='Vite' image={<ViteImg className='group-hover:scale-125 transition' />} />
 				</section>
 
 				<Title>DevOps</Title>
 				<section className='flex flex-wrap items-center justify-evenly gap-2 pl-5 pr-5 pb-5'>
-					<Skills index={21} title='Git-Github' image={<GitImg className='group-hover:scale-125 transition' />} />
+					<Skills index={22} title='Git-Github' image={<GitImg className='group-hover:scale-125 transition' />} />
 				</section>
 
 				<Title>Idiomas</Title>
 				<section className='flex flex-wrap items-center justify-evenly gap-2 pl-5 pr-5 pb-5'>
-					<Skills index={22} title='Inglês-US' image={<ENImg className='group-hover:scale-125 transition' />} />
-					<Skills index={23} title='Português-BR' image={<BrImg className='group-hover:scale-125 transition' />} />
+					<Skills index={23} title='Inglês-US' image={<ENImg className='group-hover:scale-125 transition' />} />
+					<Skills index={24} title='Português-BR' image={<BrImg className='group-hover:scale-125 transition' />} />
 				</section>
 
 				<Title>Principais habilidades</Title>
